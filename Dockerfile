@@ -24,8 +24,8 @@ RUN apt-get update \
         dnsutils
 
 RUN wget https://github.com/jethrocarr/namedmanager/archive/1.9.0.tar.gz \
-    && tar -zxvf namedmanager-1.9.0.tar.gz \
-    && rm namedmanager-1.9.0.tar.gz \
+    && tar -zxvf 1.9.0.tar.gz \
+    && rm 1.9.0.tar.gz \
     && ln -s namedmanager-1.9.0 namedmanager \
     && mkdir -p /etc/namedmanager \
     && mkdir -p /var/www/html/namedmanager/etc_bind/ \
