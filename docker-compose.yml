@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  bind9:
+    build: .
+    container_name: bind9
+    restart: unless-stopped
+    ports: 
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "8090:8090"
+    volumes:
+      - ./config:/etc/bind
+      - ./log:/var/log
+      - mysql:/var/lib/mysql
+
+volumes:
+  mysql:
